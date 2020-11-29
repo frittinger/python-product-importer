@@ -28,6 +28,18 @@
             <attribute key='FreeE1' key2='2003' multilingual='0' hasRelation='1' realtionkey='100011'>
                 <value languageId='1'>1</value>
             </attribute>
+            <structure2 id='75' itemNumber='ZZ10030075' sortkey='0' hasDrawing='0' hasCertificate='0' layoutVariant='999'>
+                <structurename languageId='1'>Filter  </structurename>
+                <structurename languageId='3'>Filter  </structurename>
+                <structurename languageId='5'>Filtro  </structurename>
+                <attribute key='FreeB29' key2='2004' multilingual='1' hasRelation='1' realtionkey='100035'>
+                    <value languageId='1'>2</value>
+                    <value languageId='3'>2</value>
+                </attribute>
+                <attribute key='FreeE3' key2='2003' multilingual='0' hasRelation='1' realtionkey='100013'>
+                    <value languageId='1'>1</value>
+                </attribute>
+            </structure2>
             <structure2 id='79' itemNumber='ZZ10030079' sortkey='0' hasDrawing='0' hasCertificate='0' layoutVariant='200'>
                 <structurename languageId='1'>Filter  </structurename>
                 <structurename languageId='3'>Filter  </structurename>
