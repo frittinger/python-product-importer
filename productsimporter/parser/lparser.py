@@ -16,7 +16,6 @@ def parse_xml(xml_file):
                             language.get('name'))
         # which key do we need? id or shortName?
         languages[lang.id] = lang
-
     print(languages)
 
 # fetch path infos
@@ -25,13 +24,11 @@ def parse_xml(xml_file):
         path_infos = PathInfo(paths[0].text, paths[1].text)
     else:
         raise AssertionError('path info missing')
-
     print(path_infos)
 
 # table definitions
     table_list = root.find('tabledefinitions')
     lookup_tables = create_lookup_tables(table_list)
-
     print(lookup_tables.keys())
     print_lookup_table(lookup_tables, '100002')
 
@@ -88,48 +85,14 @@ def create_family(in_structure, level):
         elif child.tag == 'structurename':
             structure.names[child.get('languageId')] = child.text
         elif child.tag == 'attribute':
-            # <attribute key='FreeB29' key2='2003' multilingual='0' hasRelation='1' realtionkey='100035'>
-            attribute = Attribute(child.get('key'),
-                                  child.get('key2'),
-                                  child.get('multilingual'),
-                                  child.get('hasRelation'),
-                                  child.get('realtionkey'))
-            # print(attribute)
-            structure.attributes.append(attribute)
+            structure.attributes.append(Attribute.create_attribute_from_xml(child))
         elif child.tag == 'product':
-            product = create_product(child)
+            product = Product.create_product_from_xml(child)
             structure.products.append(product)
         else:
             print(child.tag)
 
     return structure
-
-
-def create_product(element):
-    product = Product(element.get('id'),
-                      element.get('itemNumber'),
-                      element.get('sortkey'),
-                      element.get('hasDrawing'),
-                      element.get('hasCertificate'),
-                      element.get('layoutVariant'))
-    for child in element.getchildren():
-        if child.tag == 'name':
-            product.names[child.get('languageId')] = child.text
-        elif child.tag == 'description':
-            product.descriptions[child.get('languageId')] = child.text
-        elif child.tag == 'attribute':
-            # <attribute key='FreeB29' key2='2003' multilingual='0' hasRelation='1' realtionkey='100035'>
-            attribute = Attribute(child.get('key'),
-                                  child.get('key2'),
-                                  child.get('multilingual'),
-                                  child.get('hasRelation'),
-                                  child.get('realtionkey'))
-            product.attributes.append(attribute)
-        else:
-            print(child.tag)
-
-    print('Product created: {}'.format(product))
-    return product
 
 
 def print_lookup_table(lookup_tables, table_id):

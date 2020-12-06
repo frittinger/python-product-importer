@@ -38,8 +38,22 @@ class Attribute:
         self.has_relation = has_relation
         self.relation_key = relation_key
 
+    @staticmethod
+    def create_attribute_from_xml(element):
+    # <attribute key='FreeB29' key2='2003' multilingual='0' hasRelation='1' realtionkey='100035'>
+        attribute = Attribute(element.get('key'),
+                              element.get('key2'),
+                              element.get('multilingual'),
+                              element.get('hasRelation'),
+                              element.get('realtionkey'))
+        values = {}
+        for value in element.getchildren():
+            values[value.get('languageId')] = value.text
+        attribute.values = values
+        return attribute
+
     def __str__(self):
-        return 'Attribute: key {}, key2 {}'.format(self.key, self.key2)
+        return 'Attribute: key {}, key2 {}, #values: {}'.format(self.key, self.key2, len(self.values))
 
 
 class Product:
@@ -53,6 +67,27 @@ class Product:
         self.names = {}
         self.descriptions = {}
         self.attributes = []
+
+    @staticmethod
+    def create_product_from_xml(element):
+        product = Product(element.get('id'),
+                          element.get('itemNumber'),
+                          element.get('sortkey'),
+                          element.get('hasDrawing'),
+                          element.get('hasCertificate'),
+                          element.get('layoutVariant'))
+        for child in element.getchildren():
+            if child.tag == 'name':
+                product.names[child.get('languageId')] = child.text
+            elif child.tag == 'description':
+                product.descriptions[child.get('languageId')] = child.text
+            elif child.tag == 'attribute':
+                product.attributes.append(Attribute.create_attribute_from_xml(child))
+            else:
+                print(child.tag)
+
+        print('Product created: {}'.format(product))
+        return product
 
     def __str__(self):
         return 'Product: id={}, names: {}, attr: {}'. \
