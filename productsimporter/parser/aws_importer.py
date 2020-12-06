@@ -1,5 +1,5 @@
 import boto3
-from productsimporter.parser import lparser
+from productsimporter.parser import xmlparser
 
 s3client = boto3.client(
     's3',
@@ -18,9 +18,7 @@ fileobj = s3client.get_object(
 # open the file object and read it into the variable filedata.
 filedata = fileobj['Body'].read()
 
-# file data will be a binary stream.  We have to decode it
-contents = filedata.decode('utf-8')
 #
 # # Once decoded, you can treat the file as plain text if appropriate
 # print(contents)
-lparser.parse_xml(filedata)
+xmlparser.parse_xml(filedata)
