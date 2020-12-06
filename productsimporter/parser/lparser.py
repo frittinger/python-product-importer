@@ -3,8 +3,7 @@ from productsimporter.parser.model import LanguageInfo, PathInfo, LookupTable, T
 
 
 def parse_xml(xml_file):
-    dom = etree.parse(xml_file)
-    root = dom.getroot()
+    root = etree.fromstring(xml_file)
 
 # fetch language infos
     languages = {}
@@ -104,4 +103,5 @@ def print_lookup_table(lookup_tables, table_id):
 
 
 if __name__ == "__main__":
-    parse_xml('../../data/simple.xml')
+    xml_string = bytes(open('../../data/simple.xml').read(), encoding="utf-8")
+    parse_xml(xml_string)
