@@ -6,6 +6,7 @@ class LanguageInfo:
     id: str
     short_cut: str
     short_name: str
+    short_name_lowercase: str
     name: str
 
 
@@ -53,7 +54,8 @@ class Attribute:
         return attribute
 
     def __str__(self):
-        return 'Attribute: key {}, key2 {}, #values: {}'.format(self.key, self.key2, len(self.values))
+        return 'Attribute: key {}, key2 {}, #values: {}'.\
+            format(self.key, self.key2, len(self.values))
 
 
 class Product:
@@ -90,25 +92,7 @@ class Product:
         return product
 
     def __str__(self):
-        return 'Product: id={}, names: {}, attr: {}'. \
+        return 'Product: id={}, names: {}, attr: {}'.\
             format(self.id, self.names, len(self.attributes))
 
 
-class Structure:
-    def __init__(self, level):
-        self.level = level
-        self.id = None
-        self.item_number = None
-        self.sort_key = None
-        self.has_drawing = False
-        self.has_certificate = False
-        self.layout_variant = '200'
-        self.names = {}
-        self.attributes = []
-        self.products = []
-        # articles?
-        self.children = []
-
-    def __str__(self):
-        return 'Structure: level {}, id={}, children: {}, attr: {}'.\
-            format(self.level, self.id, len(self.children), len(self.attributes))

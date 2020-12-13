@@ -1,5 +1,6 @@
 from lxml import etree
-from productsimporter.parser.model import LanguageInfo, PathInfo, LookupTable, TableItem, Attribute, Product, Structure
+from productsimporter.parser.model import LanguageInfo, PathInfo, LookupTable, TableItem, Attribute, Product
+from productsimporter.parser.structure import Structure
 
 
 def parse_xml(xml_file):
@@ -12,6 +13,7 @@ def parse_xml(xml_file):
         lang = LanguageInfo(language.get('id'),
                             language.get('shortCut'),
                             language.get('shortName'),
+                            language.get('shortName').lower(),
                             language.get('name'))
         # which key do we need? id or shortName?
         languages[lang.id] = lang
@@ -36,12 +38,13 @@ def parse_xml(xml_file):
     print(len(structure1_list))
     families = {}
     for structure1 in structure1_list:
-        structure = create_family(structure1, '1')
+        structure = Structure.create_structure_from_xml(structure1, '1')
         families[structure.id] = structure
 
     print(families.keys())
     fam = families['78']
     print(fam)
+    print(fam.get_cloudsearch_doc(languages))
     print(fam.names)
     for f in fam.children:
         print('1 {}'.format(f))
@@ -62,36 +65,6 @@ def create_lookup_tables(table_list):
             items[table_item.value] = table_item
         lookup_tables[table.get('id')] = LookupTable(table.get('id'), table.get('multiselect'), items)
     return lookup_tables
-
-
-def create_family(in_structure, level):
-    structure = Structure(level)
-    # <structure1 id='5' itemNumber='ZZ01000005' sortkey='101000' hasDrawing='0' hasCertificate='0' layoutVariant='200'>
-    structure.id = in_structure.get('id')
-    structure.item_number = in_structure.get('itemNumber')
-    structure.sort_key = in_structure.get('sortkey')
-    structure.has_drawing = in_structure.get('hasDrawing')
-    structure.has_certificate = in_structure.get('hasCertificate')
-    structure.layout_variant = in_structure.get('layoutVariant')
-    children = in_structure.getchildren()
-    for child in children:
-        if child.tag == 'structure2':
-            child_struct = create_family(child, '2')
-            structure.children.append(child_struct)
-        elif child.tag == 'structure3':
-            child_struct = create_family(child, '3')
-            structure.children.append(child_struct)
-        elif child.tag == 'structurename':
-            structure.names[child.get('languageId')] = child.text
-        elif child.tag == 'attribute':
-            structure.attributes.append(Attribute.create_attribute_from_xml(child))
-        elif child.tag == 'product':
-            product = Product.create_product_from_xml(child)
-            structure.products.append(product)
-        else:
-            print(child.tag)
-
-    return structure
 
 
 def print_lookup_table(lookup_tables, table_id):
