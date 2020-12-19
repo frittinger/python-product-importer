@@ -1,4 +1,4 @@
-from productsimporter.parser.model import LanguageInfo, Attribute, Product
+from productsimporter.parser.model import Attribute, Product
 
 class Structure:
     """Structure resembles a product family in the ERP
@@ -67,11 +67,15 @@ class Structure:
         attributes["opacc_id"] = self.id
 
         # German is the fall back name if a language variant doesn't exist
-        # TODO iterate over LanguageInfos and pick the language from the names.
-        #  If one is missing, take the German one, i.e. number 1
-        for language_key in self.names:
+        # If one is missing, take the German one, i.e. number 1
+        # TODO how to define German as a constant?
+        german_language_key = '1'
+        german_text = self.names.get(german_language_key, 'no default text')
+        for language_key in languages.keys():
             language_info = languages[language_key]
-            attributes["name_" + language_info.short_name_lowercase] = self.names[language_key]
+            attributes["name_" + language_info.short_name_lowercase] = \
+                self.names.get(language_key, german_text)
+
         return attributes
 
 # number	ZZ03010009

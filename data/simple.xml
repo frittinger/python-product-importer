@@ -3,22 +3,22 @@
 <home>
     <structure>
         <structure1 id='5' itemNumber='ZZ01000005' sortkey='101000' hasDrawing='0' hasCertificate='0' layoutVariant='200'>
-            <structurename languageId='1'>Stahlregler  </structurename>
+            <structurename languageId='1'>Stahlregler DE </structurename>
         </structure1>
         <structure1 id='14' itemNumber='ZZ06000014' sortkey='110100' hasDrawing='1' hasCertificate='1' layoutVariant='200'>
-            <structurename languageId='1'>Schläuche  </structurename>
-            <structurename languageId='3'>hoses  </structurename>
-            <structurename languageId='5'>tubo  </structurename>
+            <structurename languageId='1'>Schläuche DE </structurename>
+            <structurename languageId='3'>hoses EN </structurename>
+            <structurename languageId='5'>tubo ES </structurename>
             <structure2 id='46' itemNumber='ZZ06000046' sortkey='211000' hasDrawing='1' hasCertificate='0' layoutVariant='200'>
-                <structurename languageId='1'>Anschlussschläuche  </structurename>
+                <structurename languageId='1'>Anschlussschläuche DE </structurename>
                 <structurename languageId='3'>  </structurename>
-                <structurename languageId='5'>Aireadores  </structurename>
+                <structurename languageId='5'>Aireadores ES </structurename>
             </structure2>
         </structure1>
         <structure1 id='78' itemNumber='ZZ10030078' sortkey='110000' hasDrawing='0' hasCertificate='1' layoutVariant='200'>
-            <structurename languageId='1'>Filter  </structurename>
-            <structurename languageId='3'>Filter  </structurename>
-            <structurename languageId='5'>Filtro  </structurename>
+            <structurename languageId='1'>Filter DE </structurename>
+            <structurename languageId='3'>Filter EN </structurename>
+            <structurename languageId='5'>Filtro ES </structurename>
             <attribute key='FreeB29' key2='2003' multilingual='0' hasRelation='1' realtionkey='100035'>
                 <value languageId='1'>2</value>
             </attribute>

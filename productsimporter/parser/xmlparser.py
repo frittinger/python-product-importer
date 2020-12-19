@@ -1,5 +1,5 @@
 from lxml import etree
-from productsimporter.parser.model import LanguageInfo, PathInfo, LookupTable, TableItem, Attribute, Product
+from productsimporter.parser.model import LanguageInfo, PathInfo, LookupTable, TableItem
 from productsimporter.parser.structure import Structure
 
 
@@ -42,7 +42,8 @@ def parse_xml(xml_file):
         families[structure.id] = structure
 
     print(families.keys())
-    fam = families['78']
+    # fam = families['78']
+    fam = families['5']
     print(fam)
     print(fam.get_cloudsearch_doc(languages))
     print(fam.names)
