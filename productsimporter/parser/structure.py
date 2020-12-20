@@ -1,4 +1,6 @@
-from productsimporter.parser.model import Attribute, Product
+from productsimporter.parser.model import Product
+from productsimporter.parser.attribute import Attribute
+
 
 class Structure:
     """Structure resembles a product family in the ERP
@@ -55,7 +57,7 @@ class Structure:
 
         return structure
 
-    def get_cloudsearch_doc(self, languages):
+    def get_cloudsearch_doc(self, languages, lookup_tables):
         """Creates the cloudsearch document for this structure element"""
         attributes = {}
         attributes["number"] = self.item_number
@@ -75,6 +77,10 @@ class Structure:
             language_info = languages[language_key]
             attributes["name_" + language_info.short_name_lowercase] = \
                 self.names.get(language_key, german_text)
+
+        # get attributes
+        for attribute in self.attributes:
+            attributes.update(attribute.get_cloudsearch_attributes(languages, lookup_tables))
 
         return attributes
 

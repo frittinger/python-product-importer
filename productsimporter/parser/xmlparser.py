@@ -42,10 +42,10 @@ def parse_xml(xml_file):
         families[structure.id] = structure
 
     print(families.keys())
-    # fam = families['78']
-    fam = families['5']
+    fam = families['78']
+    #fam = families['5']
     print(fam)
-    print(fam.get_cloudsearch_doc(languages))
+    print(fam.get_cloudsearch_doc(languages, lookup_tables))
     print(fam.names)
     for f in fam.children:
         print('1 {}'.format(f))

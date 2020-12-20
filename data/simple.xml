@@ -19,24 +19,24 @@
             <structurename languageId='1'>Filter DE </structurename>
             <structurename languageId='3'>Filter EN </structurename>
             <structurename languageId='5'>Filtro ES </structurename>
-            <attribute key='FreeB29' key2='2003' multilingual='0' hasRelation='1' realtionkey='100035'>
+            <attribute key='FreeB29' key2='2003' multilingual='0' hasRelation='1' realtionkey='100002'>
                 <value languageId='1'>2</value>
             </attribute>
-            <attribute key='FreeE3' key2='2003' multilingual='0' hasRelation='1' realtionkey='100013'>
+            <attribute key='FreeE3' key2='2003' multilingual='1' hasRelation='1' realtionkey='100001'>
                 <value languageId='1'>1</value>
             </attribute>
-            <attribute key='FreeE1' key2='2003' multilingual='0' hasRelation='1' realtionkey='100011'>
+            <attribute key='FreeE1' key2='2003' multilingual='0' hasRelation='1' realtionkey='100002'>
                 <value languageId='1'>1</value>
             </attribute>
             <structure2 id='75' itemNumber='ZZ10030075' sortkey='0' hasDrawing='0' hasCertificate='0' layoutVariant='999'>
                 <structurename languageId='1'>Filter  </structurename>
                 <structurename languageId='3'>Filter  </structurename>
                 <structurename languageId='5'>Filtro  </structurename>
-                <attribute key='FreeB29' key2='2004' multilingual='1' hasRelation='1' realtionkey='100035'>
+                <attribute key='FreeB29' key2='2004' multilingual='1' hasRelation='1' realtionkey='100002'>
                     <value languageId='1'>2</value>
                     <value languageId='3'>2</value>
                 </attribute>
-                <attribute key='FreeE3' key2='2003' multilingual='0' hasRelation='1' realtionkey='100013'>
+                <attribute key='FreeE3' key2='2003' multilingual='0' hasRelation='1' realtionkey='100001'>
                     <value languageId='1'>1</value>
                 </attribute>
             </structure2>
@@ -44,26 +44,26 @@
                 <structurename languageId='1'>Filter  </structurename>
                 <structurename languageId='3'>Filter  </structurename>
                 <structurename languageId='5'>Filtro  </structurename>
-                <attribute key='FreeB29' key2='2003' multilingual='0' hasRelation='1' realtionkey='100035'>
+                <attribute key='FreeB29' key2='2003' multilingual='0' hasRelation='1' realtionkey='100002'>
                     <value languageId='1'>2</value>
                 </attribute>
-                <attribute key='FreeE3' key2='2003' multilingual='0' hasRelation='1' realtionkey='100013'>
+                <attribute key='FreeE3' key2='2003' multilingual='0' hasRelation='1' realtionkey='100001'>
                     <value languageId='1'>1</value>
                 </attribute>
-                <attribute key='FreeE1' key2='2003' multilingual='0' hasRelation='1' realtionkey='100011'>
+                <attribute key='FreeE1' key2='2003' multilingual='0' hasRelation='1' realtionkey='100002'>
                     <value languageId='1'>1</value>
                 </attribute>
                 <structure3 id='125' itemNumber='ZZ10030125' sortkey='0' hasDrawing='0' hasCertificate='0' layoutVariant='200'>
                     <structurename languageId='1'>Filter  </structurename>
                     <structurename languageId='3'>Filter  </structurename>
                     <structurename languageId='5'>Filtro  </structurename>
-                    <attribute key='FreeB29' key2='2003' multilingual='0' hasRelation='1' realtionkey='100035'>
+                    <attribute key='FreeB29' key2='2003' multilingual='0' hasRelation='1' realtionkey='100002'>
                         <value languageId='1'>2</value>
                     </attribute>
-                    <attribute key='FreeE3' key2='2003' multilingual='0' hasRelation='1' realtionkey='100013'>
+                    <attribute key='FreeE3' key2='2003' multilingual='0' hasRelation='1' realtionkey='100001'>
                         <value languageId='1'>1</value>
                     </attribute>
-                    <attribute key='FreeE1' key2='2003' multilingual='0' hasRelation='1' realtionkey='100011'>
+                    <attribute key='FreeE1' key2='2003' multilingual='0' hasRelation='1' realtionkey='100002'>
                         <value languageId='1'>1</value>
                     </attribute>
                     <product id='946061' itemNumber='351271000' sortkey='0' hasDrawing='1' hasCertificate='0' layoutVariant=''>
@@ -73,10 +73,10 @@
                         <description languageId='3'>V-mesh 13/16</description>
                         <name languageId='5'>Aireadores para cuerop  </name>
                         <description languageId='5'>filtro</description>
-                        <attribute key='FreeB30' key2='2003' multilingual='0' hasRelation='1' realtionkey='100034'>
+                        <attribute key='FreeB30' key2='2003' multilingual='0' hasRelation='1' realtionkey='100001'>
                             <value languageId='1'>2</value>
                         </attribute>
-                        <attribute key='FreeB29' key2='2003' multilingual='0' hasRelation='1' realtionkey='100035'>
+                        <attribute key='FreeB29' key2='2003' multilingual='0' hasRelation='1' realtionkey='100002'>
                             <value languageId='1'>2</value>
                         </attribute>
                         <attribute key='FreeF30' key2='2003' multilingual='1' hasRelation='0'>
@@ -84,16 +84,16 @@
                             <value languageId='3'>0.335 mm</value>
                             <value languageId='5'>0.335 mm</value>
                         </attribute>
-                        <attribute key='FreeA30' key2='2003' multilingual='0' hasRelation='1' realtionkey='100022'>
+                        <attribute key='FreeA30' key2='2003' multilingual='0' hasRelation='1' realtionkey='100002'>
                             <value languageId='1'>2</value>
                         </attribute>
-                        <attribute key='FreeB11' key2='2003' multilingual='0' hasRelation='1' realtionkey='100041'>
-                            <value languageId='1'>5</value>
+                        <attribute key='FreeB11' key2='2003' multilingual='0' hasRelation='1' realtionkey='100001'>
+                            <value languageId='1'>2</value>
                         </attribute>
-                        <attribute key='FreeE3' key2='2003' multilingual='0' hasRelation='1' realtionkey='100013'>
+                        <attribute key='FreeE3' key2='2003' multilingual='0' hasRelation='1' realtionkey='100002'>
                             <value languageId='1'>1</value>
                         </attribute>
-                        <attribute key='FreeE1' key2='2003' multilingual='0' hasRelation='1' realtionkey='100011'>
+                        <attribute key='FreeE1' key2='2003' multilingual='0' hasRelation='1' realtionkey='100001'>
                             <value languageId='1'>1</value>
                         </attribute>
                     </product>
@@ -104,10 +104,10 @@
                         <description languageId='3'>V-mesh 40/22</description>
                         <name languageId='5'>Aireadores para cuerop  </name>
                         <description languageId='5'>filtro</description>
-                        <attribute key='FreeB30' key2='2003' multilingual='0' hasRelation='1' realtionkey='100034'>
+                        <attribute key='FreeB30' key2='2003' multilingual='0' hasRelation='1' realtionkey='100001'>
                             <value languageId='1'>1</value>
                         </attribute>
-                        <attribute key='FreeB29' key2='2003' multilingual='0' hasRelation='1' realtionkey='100035'>
+                        <attribute key='FreeB29' key2='2003' multilingual='0' hasRelation='1' realtionkey='100002'>
                             <value languageId='1'>2</value>
                         </attribute>
                         <attribute key='FreeF30' key2='2003' multilingual='1' hasRelation='0'>
@@ -115,16 +115,16 @@
                             <value languageId='3'>0.40 mm</value>
                             <value languageId='5'>0.40 mm</value>
                         </attribute>
-                        <attribute key='FreeA30' key2='2003' multilingual='0' hasRelation='1' realtionkey='100022'>
+                        <attribute key='FreeA30' key2='2003' multilingual='0' hasRelation='1' realtionkey='100002'>
                             <value languageId='1'>2</value>
                         </attribute>
-                        <attribute key='FreeB11' key2='2003' multilingual='0' hasRelation='1' realtionkey='100041'>
-                            <value languageId='1'>6</value>
+                        <attribute key='FreeB11' key2='2003' multilingual='0' hasRelation='1' realtionkey='100001'>
+                            <value languageId='1'>2</value>
                         </attribute>
-                        <attribute key='FreeE3' key2='2003' multilingual='0' hasRelation='1' realtionkey='100013'>
+                        <attribute key='FreeE3' key2='2003' multilingual='0' hasRelation='1' realtionkey='100002'>
                             <value languageId='1'>1</value>
                         </attribute>
-                        <attribute key='FreeE1' key2='2003' multilingual='0' hasRelation='1' realtionkey='100011'>
+                        <attribute key='FreeE1' key2='2003' multilingual='0' hasRelation='1' realtionkey='100001'>
                             <value languageId='1'>1</value>
                         </attribute>
                     </product>

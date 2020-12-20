@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-
+from productsimporter.parser.attribute import Attribute
 
 @dataclass
 class LanguageInfo:
@@ -30,32 +30,6 @@ class TableItem:
     short_name: str
     descriptions: dict
 
-
-class Attribute:
-    def __init__(self, key, key2, multilingual, has_relation, relation_key):
-        self.key = key
-        self.key2 = key2
-        self.multilingual = multilingual
-        self.has_relation = has_relation
-        self.relation_key = relation_key
-
-    @staticmethod
-    def create_attribute_from_xml(element):
-    # <attribute key='FreeB29' key2='2003' multilingual='0' hasRelation='1' realtionkey='100035'>
-        attribute = Attribute(element.get('key'),
-                              element.get('key2'),
-                              element.get('multilingual'),
-                              element.get('hasRelation'),
-                              element.get('realtionkey'))
-        values = {}
-        for value in element.getchildren():
-            values[value.get('languageId')] = value.text
-        attribute.values = values
-        return attribute
-
-    def __str__(self):
-        return 'Attribute: key {}, key2 {}, #values: {}'.\
-            format(self.key, self.key2, len(self.values))
 
 
 class Product:

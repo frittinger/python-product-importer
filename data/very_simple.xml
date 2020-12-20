@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- Export neoperl website - 15.09.2020 1.59 M98 - CatCacheNo 3 -->
+<home>
+    <structure>
+        <structure1 id='5' itemNumber='ZZ01000005' sortkey='101000' hasDrawing='0' hasCertificate='0' layoutVariant='200'>
+            <structurename languageId='1'>Stahlregler DE </structurename>
+        </structure1>
+        <structure1 id='14' itemNumber='ZZ06000014' sortkey='110100' hasDrawing='1' hasCertificate='1' layoutVariant='200'>
+            <structurename languageId='1'>Schläuche DE </structurename>
+            <structurename languageId='3'>hoses EN </structurename>
+            <structurename languageId='5'>tubo ES </structurename>
+            <structure2 id='46' itemNumber='ZZ06000046' sortkey='211000' hasDrawing='1' hasCertificate='0' layoutVariant='200'>
+                <structurename languageId='1'>Anschlussschläuche DE </structurename>
+                <structurename languageId='3'>  </structurename>
+                <structurename languageId='5'>Aireadores ES </structurename>
+            </structure2>
+        </structure1>
+        <structure1 id='78' itemNumber='ZZ10030078' sortkey='110000' hasDrawing='0' hasCertificate='1' layoutVariant='200'>
+            <structurename languageId='1'>Filter DE </structurename>
+            <structurename languageId='3'>Filter EN </structurename>
+            <structurename languageId='5'>Filtro ES </structurename>
+            <attribute key='FreeB29' key2='2003' multilingual='0' hasRelation='0'>
+                <value languageId='1'>2</value>
+            </attribute>
+            <attribute key='FreeE3' key2='2003' multilingual='0' hasRelation='1' realtionkey='100001'>
+                <value languageId='1'>1</value>
+            </attribute>
+            <attribute key='FreeF30' key2='2003' multilingual='1' hasRelation='0'>
+                <value languageId='1'>0.40 mm DE</value>
+                <value languageId='3'>0.40 mm EN</value>
+                <value languageId='5'>0.40 mm ES</value>
+            </attribute>
+            <attribute key='FreeE1' key2='2003' multilingual='0' hasRelation='1' realtionkey='100002'>
+                <value languageId='1'>1</value>
+            </attribute>
+            <structure2 id='75' itemNumber='ZZ10030075' sortkey='0' hasDrawing='0' hasCertificate='0' layoutVariant='999'>
+                <structurename languageId='1'>Filter  </structurename>
+                <structurename languageId='3'>Filter  </structurename>
+                <structurename languageId='5'>Filtro  </structurename>
+                <attribute key='FreeB29' key2='2004' multilingual='1' hasRelation='1' realtionkey='100001'>
+                    <value languageId='1'>2</value>
+                    <value languageId='3'>2</value>
+                </attribute>
+                <attribute key='FreeE3' key2='2003' multilingual='0' hasRelation='1' realtionkey='100002'>
+                    <value languageId='1'>1</value>
+                </attribute>
+            </structure2>
+        </structure1>
+    </structure>
+    <attributedefinitions>
+        <attribute key='FreeA1' key2='1001'>
+            <description languageId='1'>Mengenregelung</description>
+            <description languageId='3'>Flow regulated</description>
+            <description languageId='5'>Flow regulated</description>
+        </attribute>
+        <attribute key='FreeA1' key2='1002'>
+            <description languageId='1'>Mengenregelung</description>
+            <description languageId='3'>Flow regulated</description>
+            <description languageId='5'>Flow regulated</description>
+        </attribute>
+    </attributedefinitions>
+    <tabledefinitions>
+        <table id='100001' multiselect='0'>
+            <tableitem value='1' sortId='10' shortName='cold'>
+                <description languageId='1'>Kalt: 20°C</description>
+                <description languageId='3'>cold: 20°C</description>
+                <description languageId='5'></description>
+            </tableitem>
+            <tableitem value='2' sortId='20' shortName='warm'>
+                <description languageId='1'>Warm: 38°C</description>
+                <description languageId='3'>warm: 38°C</description>
+                <description languageId='5'></description>
+            </tableitem>
+        </table>
+        <table id='100002' multiselect='1'>
+            <tableitem value='1' sortId='10' shortName='AR fHous'>
+                <description languageId='1'>Strahlregler für Gehäuse</description>
+                <description languageId='3'>aerator with housing</description>
+                <description languageId='5'></description>
+            </tableitem>
+            <tableitem value='2' sortId='20' shortName='PAR wiT'>
+                <description languageId='1'>Kunststoffstrahlregler mit integrietem Gewinde</description>
+                <description languageId='3'>threaded aerator</description>
+                <description languageId='5'></description>
+            </tableitem>
+        </table>
+    </tabledefinitions>
+    <layoutdefinitions>
+        <layoutvariant value='200' shortName='GrV1'>
+            <description languageId='1'>Gruppen-Ansicht Variante 1</description>
+            <description languageId='3'></description>
+            <description languageId='5'></description>
+        </layoutvariant>
+        <layoutvariant value='999' shortName='dontShow'>
+            <description languageId='1'>Nicht anzeigen</description>
+            <description languageId='3'>Don't Show</description>
+            <description languageId='5'></description>
+        </layoutvariant>
+    </layoutdefinitions>
+    <languageInfo>
+        <language id='1'  shortCut='D' shortName='DE' name='Deutsch'/>
+        <language id='3'  shortCut='E' shortName='EN' name='English'/>
+        <language id='5'  shortCut='S' shortName='ES' name='Spanisch'/>
+    </languageInfo>
+    <pathInfo>
+        <picturePath>https://fo-neoperlexport-eshop.opacc.net/CatCache/catcache.3/pictures/</picturePath>
+        <pictoPath>https://fo-neoperlexport-eshop.opacc.net/CatCache/catcache.3/others/vi/picto/</pictoPath>
+    </pathInfo>
+</home>
+
